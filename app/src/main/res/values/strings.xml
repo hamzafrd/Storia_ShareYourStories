@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Storia</string>
+    <string name="Logout">Logout</string>
+    <string name="published_date">example@2023</string>
+    <string name="title">title@2023</string>
+    <string name="desc">Description</string>
+
+    <string name="hint_email">story@example.com</string>
+    <string name="hint_name">Username</string>
+    <string name="hint_password">********</string>
+    <string name="invalid_email">Email is invalid</string>
+    <string name="invalid_password">Password cannot be less than 8 character</string>
+    <string name="empty_email">Email cannot be empty</string>
+    <string name="empty_name">Name cannot be empty</string>
+    <string name="empty_password">Password cannot be empty</string>
+
+    <string name="camera_x">CameraX</string>
+    <string name="camera">Kamera</string>
+    <string name="gallery">Galeri</string>
+    <string name="upload">Unggah</string>
+    <string name="register">Register</string>
+    <string name="continue_btn_txt">Continue</string>
+    <string name="masukan_nama">Masukan nama</string>
+    <string name="hamzafrd_example_com">hamzafrd@example.com</string>
+    <string name="password">Password</string>
+    <string name="img_story">story photos</string>
+    <string name="login">Login</string>
+
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="normal_type">Normal</string>
+    <string name="satellite_type">Satellite</string>
+    <string name="terrain_type">Terrain</string>
+    <string name="hybrid_type">Hybrid</string>
+    <string name="capture_button">Toggle Take A Picture</string>
+    <string name="switch_camera">switch camera</string>
+    <string name="register_btn">Register</string>
+    <string name="location">Location</string>
+    <string name="retry">Retry</string>
+    <string name="include_loc">location\n</string>
+</resources>
