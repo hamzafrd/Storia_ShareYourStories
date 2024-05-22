@@ -1,6 +1,6 @@
 package com.hamzafrd.storia.data.remote.retrofit
 
-import android.util.Log
+import com.hamzafrd.storia.BuildConfig
 import com.hamzafrd.storia.helper.SessionPreferences
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
@@ -12,7 +12,9 @@ import retrofit2.converter.gson.GsonConverterFactory
 object ApiConfig {
     fun getApiService(sessionPreferences: SessionPreferences): ApiService {
         val loggingInterceptor =
-            HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
+            if (BuildConfig.DEBUG) HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
+            else HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.NONE)
+
         val client = OkHttpClient.Builder()
             .addInterceptor(loggingInterceptor)
             .addInterceptor { chain ->
@@ -27,7 +29,7 @@ object ApiConfig {
             }
             .build()
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://story-api.dicoding.dev/")
+            .baseUrl(BuildConfig.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()
